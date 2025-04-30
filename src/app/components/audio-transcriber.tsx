@@ -1,6 +1,6 @@
 'use client'
 
-import { CopyIcon, DownloadIcon } from 'lucide-react'
+import { CaptionsIcon, CopyIcon, DownloadIcon } from 'lucide-react'
 import { OpenAI } from 'openai'
 import { useState } from 'react'
 
@@ -81,9 +81,14 @@ export default function AudioTranscriber() {
 
     return (
         <div className="max-w-xl mx-auto p-4 border rounded-xl shadow-md">
-            <h2 className="text-xl font-bold mb-4">STT: Speech To Text.</h2>
-            <label className="block mb-2 font-medium">Your OpenAI ApiKey:</label>
+            <div className='flex justify-center items-center gap-2 mb-4'>
+                <h2 className="text-xl font-bold mb-4 inline-flex items-center gap-2">
+                    <CaptionsIcon />
+                    STT:Speech To Text
+                </h2>
+            </div>
 
+            <label className="block mb-2 font-medium">Your OpenAI ApiKey:</label>
             <div className='flex flex-col gap-4 w-full'>
                 <input
                     type="password"

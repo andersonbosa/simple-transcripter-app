@@ -1,4 +1,5 @@
-import AudioTranscriber from "./components/audio-transcriber";
+import { GlobeIcon } from "lucide-react"
+import AudioTranscriber from "./components/audio-transcriber"
 
 export default function Home() {
   return (
@@ -13,9 +14,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Create by Anderson Bosa.
+          <GlobeIcon className="w-4" />
+          Created by
+          Anderson Bosa.
         </a>
       </footer>
     </div>
-  );
+  )
 }
