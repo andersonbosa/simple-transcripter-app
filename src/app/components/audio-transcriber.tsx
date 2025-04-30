@@ -47,8 +47,8 @@ export default function AudioTranscriber() {
         setError('')
 
         try {
-
-            const client = new OpenAI({ apiKey })
+            // https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
+            const client = new OpenAI({ apiKey, dangerouslyAllowBrowser: true })
             const transcription = await client.audio.transcriptions.create({
                 file,
                 model: "gpt-4o-transcribe",
